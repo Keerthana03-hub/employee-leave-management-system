@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply Leave</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Apply for Leave</h2>
+
+    <form onsubmit="applyLeave(event)">
+        
+        <label>Leave Type</label>
+        <select id="leaveType" required>
+            <option value="">Select Leave Type</option>
+            <option value="Sick Leave">Sick Leave</option>
+            <option value="Casual Leave">Casual Leave</option>
+            <option value="Paid Leave">Paid Leave</option>
+        </select>
+
+        <label>From Date</label>
+        <input type="date" id="fromDate" required>
+
+        <label>To Date</label>
+        <input type="date" id="toDate" required>
+
+        <label>Reason</label>
+        <textarea id="reason" rows="4" placeholder="Enter reason..." required></textarea>
+
+        <button type="submit">Submit Leave</button>
+    </form>
+
+    <button onclick="goBack()" class="back-btn">Back to Dashboard</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
